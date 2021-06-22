@@ -39,6 +39,18 @@
 	margin: auto;
 	display: flex;
 	flex-direction: column;
+	
+	transition: opacity .5s ease-out;
+	animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+	animation-name: bounce;
+}
+
+@keyframes bounce{
+	from { transform: translateY(0)   }
+	50%  { transform: translateY(-5px)}
+	to   { transform : translateY(0)  }
 }
 
 .plateforme{
