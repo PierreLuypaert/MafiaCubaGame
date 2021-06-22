@@ -5,3 +5,59 @@
 	--main-button-color : brown;
 	--text-color : white;
 }
+
+/* Header style */
+.header
+{
+	height:100px;
+    width: 100%;
+    color:white;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.header .header-left
+{
+    width: 60%;
+    display:flex;
+    align-items: center;
+}
+.header .header-right
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 40%;
+}
+
+.header .header-container
+{
+    width: 1110px;
+    max-width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:30px 50px 30px 50px;
+}
+
+.header .header-link
+{
+    margin-left: 8%;
+    font-size: 17px;
+    font-weight: 300;
+    opacity: .8;
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+}
+
+/* Icons style */
+.icon 
+{
+    width:40px;
+    height:40px;
+}
