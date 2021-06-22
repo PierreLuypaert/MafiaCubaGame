@@ -22,3 +22,47 @@
 	display: flex;
 	overflow: hidden;
 }
+
+.centered-container{
+	width: 1100px;
+	height: 100vh;
+	margin: auto;
+	max-width: 1100px;
+	display: flex;
+	flex-direction: column;
+}
+
+.character-icon{
+	position: relative;
+	bottom: 10%;
+	height: 40vh;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.plateforme{
+	position: relative;
+	bottom: 12%;
+	z-index: 10;
+}
+
+.character {
+	z-index: 11;
+}
+
+.button-wrapper{
+	position: absolute;
+	bottom: 35px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.button-wrapper button{
+	background-color: var(--main-button-color);
+	color: var(--text-color);
+	border: 0;
+	border-radius: 15px;
+	height: 50px;
+	width: 100px;
+}
