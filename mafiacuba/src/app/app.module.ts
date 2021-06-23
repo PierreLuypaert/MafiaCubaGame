@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { Router, RouterModule } from '@angular/router';
+import { TokensCarouselComponent } from './tokens-carousel/tokens-carousel.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent
+    HomepageComponent,
+    TokensCarouselComponent
   ],
   imports: [
     BrowserModule,
