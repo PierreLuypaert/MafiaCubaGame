@@ -1,0 +1,7 @@
+<div class="tokens-container">
+	<div class="tokens-carousel">
+		<div  [style]="getTransform(index)" *ngFor="let token of tokens ; let index = index; "  class="token">
+			<img src="assets/images/tokens/{{ token }}" alt="token"/>
+		</div>
+	</div>
+</div>
