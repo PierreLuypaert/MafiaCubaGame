@@ -25,7 +25,7 @@ const TOKENS = [
 @Component({
   selector: 'app-tokens-carousel',
   templateUrl: './tokens-carousel.component.html',
-  styleUrls: ['./tokens-carousel.component.css']
+  styleUrls: ['./tokens-carousel.component.scss']
 })
 export class TokensCarouselComponent implements OnInit {
 
