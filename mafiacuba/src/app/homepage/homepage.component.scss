@@ -113,27 +113,93 @@
 /* Rules part */
 
 
-.rules
+.carousel-article
 {
-    width: 100%;
+	position: relative;	
     color:white;
-	display: flex;
-	
-	.centered-container{
-		width: 1100px;
-		height: 100vh;	
-		max-width: 1100px;
-		display: flex;
-		flex-direction: row;
-		margin:auto;
-		flex-wrap: wrap	;
+	margin: auto;
+	width: 50%;
+	height:50vh;
 		
+	.news-box
+	{    
+		border-radius: 15px;
+		overflow: hidden;
+		height:100%;
+		width: 100%;
+		position:relative;
+		top:0;
+		left:0;	
+		box-shadow: 0px 14px 80px rgba(100, 35, 58,0.5);	
+
+		.img-news{
+			z-index: 20	;
+			display: flex;
+			width: 100%;
+			filter: brightness(50%);		
+		}
+
+		.news-content
+		{
+			position: absolute;
+			padding-left: 4vw;
+			padding-top: 20px;
+			width:90%;
+			z-index: 21;
+			font-family: 'ArticleFont', Arial, sans-serif;
+			.news-title
+			{
+				color:white;
+				font-weight: bolder;	
+				display:flex;
+				align-items: flex-end;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				.news-article-title
+				{
+					font-size:150%;
+					padding-right:10%;
+				}
+			}
+			.news-description
+			{
+				padding-right:10px;
+				opacity: 0;
+				transition: 0.3s;
+			}
+		}
+
+		&:hover > .news-content > .news-description {
+			opacity: 1;
+			transform: translateY(10px);
+		}
+
+		.news-slider-btns
+		{
+			z-index: 30;
+			position: absolute;
+			top:90%;
+			right:3%;
+
+			input:not(:last-child)
+			{
+				margin-right:30px;
+			}
+		}
+	}
+
+	.character-box
+	{
+		position: absolute;
+		top:0;
+		left:0;
+		z-index: 20;
+		transform: translateX(-51%);
 
 		.character-icon{
 			position: relative;
 			bottom: 10%;
 			height: 40vh;
-			margin: auto;
 			display: flex;
 			flex-direction: column;
 			
@@ -153,31 +219,15 @@
 				z-index: 11;
 			}	
 		}
-
-		.midcontainer
-		{
-			align-items: center;
-			display: flex;
-			flex-direction: column;
-			height: 100%;
-			justify-content: center;
-
-			.box
-			{
-				color: #7b7992;
-				background-color: white;
-				height:300px;
-				width:80%;
-				padding:20px;	
-				margin-bottom: 90px;
-				border-radius: 25px;
-				box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
-				cursor: pointer;
-				opacity: 0.8;
-			}
-		}
 	}
+
 }
+
+@media (max-width: 600px) {
+	.character-box {
+	  display: none;
+	}
+  }
 
 
 
