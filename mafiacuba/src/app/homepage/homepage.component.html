@@ -48,15 +48,10 @@
 						</div>
 					</div>
 					<div class="news-slider-btns">
-						<input type="radio" id="choice1" name="newchoice">
-						<input type="radio" id="choice2" name="newchoice">
-						<input type="radio" id="choice3" name="newchoice">
-						<input type="radio" id="choice4" name="newchoice">
+						<input (change)="change(index)" type="radio" name="newchoice" *ngFor="let img of imgs; let index = index;"  [attr.id]="'radio' + (index)" [checked]="index==0"/>
 					</div>
 					<div class="img-news">
-						<img src="assets/images/news/new1.jpg"/>
-						<img src="assets/images/news/new1.jpg"/>
-						<img src="assets/images/news/new3.jpg"/>
+						<img *ngFor="let img of imgs; let index = index"  [attr.id]="'choice' + (index+1)" src={{img.link}} [ngClass]="{'transparent': index!=0}"/>
 					</div>
 				</div>
 			</div>
