@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { Router, RouterModule } from '@angular/router';
 import { TokensCarouselComponent } from './tokens-carousel/tokens-carousel.component';
+import { ObserveVisibilityDirective } from './directive/observe-visibility.directive';
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    TokensCarouselComponent
+    TokensCarouselComponent,
+    ObserveVisibilityDirective
   ],
   imports: [
     BrowserModule,
