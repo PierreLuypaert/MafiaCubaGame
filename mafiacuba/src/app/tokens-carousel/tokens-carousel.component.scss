@@ -10,11 +10,17 @@
 	
 
 	.roles-title{
+		opacity: 0;
 		margin-top: 100px;
 		color: white;
 		text-align: center;
 		font-size: 60px;
 		font-weight: 700;
+	}
+
+	.titleVisible{
+		opacity: 1;
+		animation: slideIn 700ms ease-in;
 	}
 
 	.role-description {
@@ -86,11 +92,16 @@
 				}
 	
 				img{
+					transition: transform 0.6s;
 					user-select: none;
 					height: 16vh;
 					width: 16vh;
 				}
 			}
+		}
+
+		.no-transition {
+			transition: none;
 		}
 	}
 }
@@ -105,6 +116,20 @@
 	    transform:  rotateY(360deg);
 	}
   }
+
+  @keyframes slideIn {
+	from {
+		font-size: 50px;
+		transform: translateY(-20px);
+		opacity: 0;
+	}
+	to {
+		font-size: 60px;
+	    transform:  translateY(0);
+		opacity: 1;
+	}
+  }
+
 
 
 

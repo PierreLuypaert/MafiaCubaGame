@@ -1,14 +1,18 @@
 
 <div class="roles-container">
-	<h1 class="roles-title">Liste des rôles</h1>
+	<h1 class="roles-title" [class.titleVisible]="titleVisible"
+		observeVisibility
+		[debounceTime]="100"
+        (visible)="onTitleVisible()"
+	>Liste des rôles</h1>
 	<div class="role-description">
 		<h1>{{ role_name }}</h1>
 		<p> {{ role_desc }}</p>
 	</div>
 	<div class="tokens-carousel">
-		<div  [style]="getTransform(index)" *ngFor="let token of tokens ; let index = index; "  class="token">
+		<div  [style]="getTransform(index)" *ngFor="let token of tokens ; let index = index;"  class="token" [class.no-transition]="!transition_active">
 			<div class="flip-3D">
-				<img (click)="selectToken(index)" src="assets/images/tokens/{{ token.link }}" alt="token"/>
+				<img [style]="getScale(index)"  (click)="selectToken(index)" src="assets/images/tokens/{{ token.link }}" alt="token"/>
 			</div>
 		</div>
 		<img (click)="slideToRight()" src="assets/images/right-arrow.svg" alt="arrow-right" class="arrow-carousel right-arrow"/>
