@@ -33,6 +33,12 @@
 					</div>
 				</div>
 				<div class="news-box">
+					<div class="img-news">
+						<img *ngFor="let img of imgs; let index = index" src={{img.link}} [ngClass]="{'transparent': index!=selectedElement}"/>
+					</div>
+					<div class="news-slider-btns">
+						<input (change)="change(index)" type="radio" name="newchoice" *ngFor="let img of imgs; let index = index;" [checked]="index==autoRadioBtnIndex"/>
+					</div>
 					<div class="news-content">
 						<div class="news-title">
 							<div class="news-article-title">
@@ -46,12 +52,6 @@
 						<div class="news-description">
 							<p>Il n’y avait pas eu d’article depuis Juin 2019 à l’arrivée des Lauriers en tant que nouveau système de classement. Il est grand temps de faire un point sur les nombreuses évolutions de Wolfy.</p>
 						</div>
-					</div>
-					<div class="news-slider-btns">
-						<input (change)="change(index)" type="radio" name="newchoice" *ngFor="let img of imgs; let index = index;"  [attr.id]="'radio' + (index)" [checked]="index==0"/>
-					</div>
-					<div class="img-news">
-						<img *ngFor="let img of imgs; let index = index"  [attr.id]="'choice' + (index+1)" src={{img.link}} [ngClass]="{'transparent': index!=0}"/>
 					</div>
 				</div>
 			</div>
