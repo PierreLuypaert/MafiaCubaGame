@@ -7,6 +7,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { Router, RouterModule } from '@angular/router';
 import { TokensCarouselComponent } from './tokens-carousel/tokens-carousel.component';
 import { ObserveVisibilityDirective } from './directive/observe-visibility.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +20,8 @@ import { ObserveVisibilityDirective } from './directive/observe-visibility.direc
     BrowserModule,
     AppRoutingModule,
     RouterModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
