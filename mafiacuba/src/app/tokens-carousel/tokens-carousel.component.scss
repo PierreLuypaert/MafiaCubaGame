@@ -1,3 +1,4 @@
+$scale: 1;
 
 .roles-container{
 	height: 100vh;
@@ -11,17 +12,17 @@
 
 	.roles-title{
 		opacity: 0;
-		margin-top: 100px;
+		margin: 0;
+		height: 120px;
+		margin-top: 2vh;
+		margin-bottom: 3vh;
 		color: white;
 		text-align: center;
-		font-size: 60px;
+		font-size: 3rem;
 		font-weight: 700;
 	}
 
-	.titleVisible{
-		opacity: 1;
-		animation: slideIn 700ms ease-in;
-	}
+
 
 	.role-description {
 		display: flex;
@@ -29,17 +30,43 @@
 		color: white;
 		max-width: 90%;
 		height: 100px;
+		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
 
 		h1 { 
-			font-size: 40px;
+			opacity: 0;
+			font-size: 2.0rem;
 		}
 
 		p { 
-			font-size: 20px;
+			opacity: 0;
+			font-size: 1.2rem;
+			text-align: center;
+		}
+
+		@media (max-width : 750px){
+			justify-content: center;
+			flex-direction: column;
+			flex-wrap: inherit;
+		}
+		
+		.roleDesc-visible{
+			opacity: 1;
+			animation: slideRight 700ms ease-in-out;
+		}
+
+		.roleName-visible{
+			opacity: 1;
+			animation: slideLeft 700ms ease-in-out;
 		}
 	}
+
+	.titleVisible{
+		opacity: 1;
+		animation: slideIn 700ms ease-in;
+	}
+
 
 	.tokens-carousel {
 		position: relative;
@@ -59,15 +86,16 @@
 			&:hover {
 				width: 9vh;
 				height: 9vh;
+				transition: all 1s linear;
 			}
 		}
 
 		.left-arrow{
-			transform: translate(calc( -50% - 25vh ) , calc( -50% + 18vh)) rotate(180deg);
+			transform: translate(calc( -50% - 15vh - 6vw ) , calc( -50% + 18vh)) rotate(180deg);
 		}
 
 		.right-arrow{
-			transform: translate(calc( -50% + 25vh ) , calc( -50% + 18vh));
+			transform: translate(calc( -50% + 15vh + 6vw ) , calc( -50% + 18vh));
 		}
 
 		.token{
@@ -76,7 +104,7 @@
 			top: 50%;
 			left: 50%;
 			perspective: 1000px;
-			transition: transform 0.6s;
+			transition: all 0.6s ;
 			
 			.flip-3D{
 				position: relative;
@@ -92,10 +120,16 @@
 				}
 	
 				img{
-					transition: transform 0.6s;
+					opacity: 0;
+					transform: scale(0) ;
+					transition: transform 0.6s , opacity 1s;
 					user-select: none;
 					height: 16vh;
 					width: 16vh;
+				}
+
+				.token-visible{
+					opacity: 1;
 				}
 			}
 		}
@@ -117,18 +151,40 @@
 	}
   }
 
-  @keyframes slideIn {
+@keyframes slideIn {
 	from {
-		font-size: 50px;
-		transform: translateY(-20px);
+		font-size: 2rem;
 		opacity: 0;
 	}
 	to {
-		font-size: 60px;
-	    transform:  translateY(0);
+		font-size: 3rem;
+		opacity: 1;
+	}
+}
+
+  @keyframes slideLeft {
+	from {
+		transform: translateX(-100px);
+		opacity: 0;
+	}
+	to {
+	    transform:  translateX(0);
 		opacity: 1;
 	}
   }
+
+  
+  @keyframes slideRight {
+	from {
+		transform: translateX(100px);
+		opacity: 0;
+	}
+	to {
+	    transform:  translateX(0);
+		opacity: 1;
+	}
+  }
+
 
 
 
