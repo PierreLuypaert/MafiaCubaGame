@@ -1,3 +1,17 @@
+::-webkit-scrollbar {
+	width: 6px;
+	background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--main-bg-color);
+	border-radius: 10px;
+  }
+
+.scrollable-div{
+	max-height: 100vh;
+	overflow: auto;	
+}
 
 .container{
 	height: 100vh;
@@ -25,16 +39,19 @@
 
 /* Header style */
 
+
 .header
 {
+	background-color: var(--main-bg-color) ;
 	height:100px;
     width: 100%;
     color:white;
     position: fixed;
-    z-index: 10;
+    z-index: 999;
     display: flex;
     justify-content: center;
     align-items: center;
+	transition: all 0.5s;
 
 	.header-container
 	{
@@ -78,6 +95,10 @@
 			text-decoration: none;
 		}
 	}	
+}
+
+.opaque{
+		background-color: transparent;
 }
 
 

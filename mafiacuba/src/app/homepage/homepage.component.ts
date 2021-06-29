@@ -1,4 +1,5 @@
-import { AfterViewInit, ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { CdkScrollable, ScrollDispatcher } from '@angular/cdk/scrolling';
+import { AfterViewInit, ChangeDetectorRef, Component, NgZone, OnInit } from '@angular/core';
 
 
 @Component({
@@ -8,17 +9,40 @@ import { AfterViewInit, ChangeDetectorRef, Component, OnInit } from '@angular/co
 })
 export class HomepageComponent implements OnInit, AfterViewInit {
 
+  
   imgs : any[] = [
     { link : "assets/images/news/new1.jpg"},
     { link : "assets/images/news/new2.jpg"},
     { link : "assets/images/news/new2.jpg"},
     { link : "assets/images/news/new1.jpg"},
   ];
+
+  isOnTop = true;
   selectedElement : number = 0;
   autoRadioBtnIndex : number = 0;
-  constructor() { }
+
+  constructor(    
+    private scrollDispatcher: ScrollDispatcher,
+    private zone: NgZone
+    ) { }
 
   ngOnInit(): void {
+    this.scrollDispatcher.scrolled().subscribe((event: CdkScrollable) => {
+      const scroll = event.measureScrollOffset("top");
+      let newIsOnTop = this.isOnTop;
+
+      if (scroll > 80) {
+        newIsOnTop = false
+      } else {
+        newIsOnTop = true;
+      }
+
+      if (newIsOnTop !== this.isOnTop) {
+        this.zone.run(() => {
+          this.isOnTop = newIsOnTop;
+        });
+      }
+    });
   } 
   
   ngAfterViewInit(): void {
