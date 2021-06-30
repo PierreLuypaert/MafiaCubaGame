@@ -10,6 +10,7 @@ import { TokensCarouselComponent } from './tokens-carousel/tokens-carousel.compo
 import { ObserveVisibilityDirective } from './directive/observe-visibility.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import {MatButtonModule} from '@angular/material/button';
     AppRoutingModule,
     RouterModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -114,18 +114,19 @@
 
 .button-wrapper{
 	position: absolute;
-	bottom: 35px;
+	bottom: 55px;
 	left: 50%;
 	transform: translateX(-50%);
-/*
-	button{
-		background-color: var(--main-button-color);
-		color: var(--text-color);
-		border: 0;
-		border-radius: 15px;
-		height: 50px;
-		width: 100px;
-	}*/
+}
+
+
+button{
+	height:50px;
+	margin:20px;
+	color:white;
+	background-color: #ffb027;
+	font-size: 1.2rem;
+	border-radius: 10px;
 }
 
 
@@ -265,6 +266,7 @@
 			
 			.character {
 				z-index: 11;
+				
 			}	
 		}
 	}
