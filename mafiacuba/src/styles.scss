@@ -4,13 +4,29 @@
 	font-family: "ArticleFont";
 	src: url("assets/fonts/font.woff2") format("woff2"),
 }
+
 :root{
 	--main-bg-color: #111C30;
 	--main-button-color : brown;
 	--text-color : white;
 }
 
+html {
+	font-size: 200%;
+}
 
 
-html, body { height: 100%; }
+@media (max-width: 1024px) {
+	html {
+		font-size : 150%;
+	}
+}
+
+@media (max-width: 540px) {
+	html {
+		font-size : 100%;
+	}
+}
+
+
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

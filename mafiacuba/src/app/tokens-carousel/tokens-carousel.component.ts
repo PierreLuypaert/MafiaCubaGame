@@ -26,6 +26,8 @@ export class TokensCarouselComponent implements OnInit {
   transitionEffect : boolean = true;
 
   titleVisible : boolean = false;
+  roleVisible  : boolean = false;
+  imageVisible : boolean = false;
   
 
   constructor() {
@@ -97,7 +99,10 @@ export class TokensCarouselComponent implements OnInit {
   }
 
   getScale( index : number){
-    return index == this.selectedToken ? "transform : scale(2.2);" : "transform : scale(1);"
+    if ( this.imageVisible )
+      return index == this.selectedToken ? "transform : scale(2.2);" : "transform : scale(1); "
+    else 
+      return "transform : scale(0.5)"
   }
 
   /**
@@ -106,5 +111,13 @@ export class TokensCarouselComponent implements OnInit {
 
   onTitleVisible(){
     this.titleVisible = true
+  }
+
+  onRoleVisible(){
+    this.roleVisible = true
+  }
+
+  onImageVisible(){
+    this.imageVisible = true
   }
 }
