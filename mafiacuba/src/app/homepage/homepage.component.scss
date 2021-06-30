@@ -114,22 +114,21 @@
 
 .button-wrapper{
 	position: absolute;
-	bottom: 55px;
+	bottom: 35px;
 	left: 50%;
 	transform: translateX(-50%);
+/*
+	*/
 }
-
 
 button{
 	height:50px;
 	margin:20px;
 	color:white;
 	background-color: #ffb027;
-	font-size: 1.2rem;
+	font-size: 0.8rem;
 	border-radius: 10px;
 }
-
-
 /* Rules part */
 
 
@@ -266,7 +265,6 @@ button{
 			
 			.character {
 				z-index: 11;
-				
 			}	
 		}
 	}
@@ -283,9 +281,3 @@ button{
 	  display: none;
 	}
   }
-  
-
-
-
-
-
