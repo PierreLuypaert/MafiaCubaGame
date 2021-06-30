@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+	font-family: "ArticleFont";
+	src: url("assets/fonts/font.woff2") format("woff2"),
+}
+
+:root{
+	--main-bg-color: #111C30;
+	--main-button-color : brown;
+	--text-color : white;
+}
+
+html {
+	font-size: 200%;
+}
+
+
+@media (max-width: 1024px) {
+	html {
+		font-size : 150%;
+	}
+}
+
+@media (max-width: 540px) {
+	html {
+		font-size : 100%;
+	}
+}
+
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
