@@ -32,13 +32,12 @@ export class TokensCarouselComponent implements OnInit {
 
   constructor() {
 
-   }
+  }
 
   ngOnInit(): void {
     this.tokens = this.tokens.concat(TOKENS,TOKENS,TOKENS,TOKENS,TOKENS,TOKENS,TOKENS,TOKENS,TOKENS)
     this.selectedToken = Math.round(this.tokens.length/2)
   }
-
 
   /**
    * Gestion des actions pourfaire dérouler le carousel ou sélectionner un jeton particulier,
