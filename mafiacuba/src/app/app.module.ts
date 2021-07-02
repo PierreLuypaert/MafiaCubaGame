@@ -11,12 +11,14 @@ import { ObserveVisibilityDirective } from './directive/observe-visibility.direc
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { ArticleCarouselComponent } from './article-carousel/article-carousel.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     TokensCarouselComponent,
-    ObserveVisibilityDirective
+    ObserveVisibilityDirective,
+    ArticleCarouselComponent
   ],
   imports: [
     ScrollingModule,
