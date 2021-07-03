@@ -12,13 +12,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { ArticleCarouselComponent } from './article-carousel/article-carousel.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     TokensCarouselComponent,
     ObserveVisibilityDirective,
-    ArticleCarouselComponent
+    ArticleCarouselComponent,
+    FooterComponent
   ],
   imports: [
     ScrollingModule,
