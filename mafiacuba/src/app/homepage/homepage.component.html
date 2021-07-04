@@ -1,5 +1,4 @@
 <div class="scrollable-div" cdkScrollable>
-	
 	<div class="header" [ngClass]="{'opaque': isOnTop}" >
 		<div class="header-container">
 			<div class="header-left">
@@ -10,7 +9,7 @@
 			</div>
 			<div class="header-right">
 				<a href="#" class="header-link">Actualités</a>
-				<button mat-stroked-button >
+				<button mat-stroked-button routerLink="/connexion">
 					<mat-icon>power_settings_new</mat-icon>
 					Connexion
 				</button>
@@ -58,7 +57,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="button-wrapper">
+				<div class="button-wrapper" >
 					<button mat-stroked-button >
 						<mat-icon>play_arrow</mat-icon>
 						Jouer une partie
