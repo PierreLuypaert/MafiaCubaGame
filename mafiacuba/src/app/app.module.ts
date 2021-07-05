@@ -7,24 +7,26 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { Router, RouterModule } from '@angular/router';
 import { TokensCarouselComponent } from './tokens-carousel/tokens-carousel.component';
-import { ObserveVisibilityDirective } from './directive/observe-visibility.directive';
+import { ObserveVisibilityDirective } from '../shared/directive/observe-visibility.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+
+import { ConnexionComponent } from './connexion/connexion.component';
+
 import { ArticleCarouselComponent } from './article-carousel/article-carousel.component';
 import { FooterComponent } from './footer/footer.component';
-import { ProfilComponent } from './profil/profil.component';
-import { HeaderComponent } from './header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     TokensCarouselComponent,
     ObserveVisibilityDirective,
+
+    ConnexionComponent
     ArticleCarouselComponent,
-    FooterComponent,
-    ProfilComponent,
-    HeaderComponent
+    FooterComponent
+
   ],
   imports: [
     ScrollingModule,
@@ -35,7 +37,9 @@ import { HeaderComponent } from './header/header.component';
     MatButtonModule,
     MatIconModule,
   ],
-  providers: [],
+  providers: [
+    ObserveVisibilityDirective,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
