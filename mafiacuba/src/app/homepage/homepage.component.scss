@@ -125,9 +125,15 @@ button{
 	height:50px;
 	margin:20px;
 	color:white;
-	background-color: #ffb027;
+	background-color: var(--main-button-color);
 	font-size: 0.8rem;
 	border-radius: 10px;
+	vertical-align: middle;
+
+	.mat-icon
+	{
+		padding-bottom:5px;
+	}
 }
 /* Rules part */
 
