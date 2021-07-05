@@ -7,8 +7,9 @@
 
 :root{
 	--main-bg-color: #111C30;
+	--connexion-bg-color: #794A34;
+	--main-button-color : #ffb027;
 	--secondary-color : brown;
-	--main-button-color : brown;
 	--text-color : white;
 
 	
@@ -33,3 +34,33 @@ html {
 
 
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.input-icon { 
+	position: relative;
+    display: flex;
+    align-items: center;
+    height: 41px;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 4px;
+    border-radius: 12px;
+    background-color: #0e0e14;
+
+	input {
+		background: none;
+		display: inline-block;
+		height: 100%;
+		width: 100%;
+		font-size: 13px;
+		padding: 16px;
+		color: #fff;
+		border-color: transparent; 
+	}
+
+	mat-icon
+	{
+		color:white;
+		margin-left: 5px;
+	}
+}

@@ -144,19 +144,25 @@
 	}
 }
 
-.opaque{
-	background-color: transparent;
-	box-shadow: none;
+
+.button-wrapper{
+	position: absolute;
+	bottom: 35px;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 button{
 	height:50px;
 	margin:20px;
 	color:white;
-	background-color: #ffb027;
+	background-color: var(--main-button-color);
 	font-size: 0.8rem;
 	border-radius: 10px;
+	vertical-align: middle;
+
+	.mat-icon
+	{
+		padding-bottom:5px;
+	}
 }
-/* Rules part */
-
-
