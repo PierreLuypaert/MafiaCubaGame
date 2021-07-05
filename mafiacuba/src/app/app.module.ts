@@ -12,13 +12,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { ConnexionComponent } from './connexion/connexion.component';
+import { ArticleCarouselComponent } from './article-carousel/article-carousel.component';
+import { FooterComponent } from './footer/footer.component';
+import { ProfilComponent } from './profil/profil.component';
+import { HeaderComponent } from './header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     TokensCarouselComponent,
     ObserveVisibilityDirective,
-    ConnexionComponent
+    ConnexionComponent,
+    ArticleCarouselComponent,
+    FooterComponent,
+    ProfilComponent,
+    HeaderComponent
   ],
   imports: [
     ScrollingModule,

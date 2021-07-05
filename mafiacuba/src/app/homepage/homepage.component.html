@@ -1,71 +1,18 @@
-<div class="scrollable-div" cdkScrollable>
-	<div class="header" [ngClass]="{'opaque': isOnTop}" >
-		<div class="header-container">
-			<div class="header-left">
-				<img class="icon" src="assets/images/icons/logo.svg"/>
-				<a href="#" class="header-link">Accueil</a>
-				<a href="#" class="header-link">Règles du jeu</a>
-				<a href="#" class="header-link">Classements</a>
-			</div>
-			<div class="header-right">
-				<a href="#" class="header-link">Actualités</a>
-				<button mat-stroked-button routerLink="/connexion" >
-					<mat-icon>power_settings_new</mat-icon>
-					Connexion
-				</button>
-			</div>
-		</div>
-	</div>
-
-	<div class="container">
-		<div class="homepage">
-			<div class="background-img">
-				<div class="carousel-article">
-					<div class="character-box">
-						<div class="character-icon">
-							<img class="character"
-							src="../../assets/images/character.svg"
-							alt="personnage"
-							height="100%" />
-							<img class="plateforme"
-								src="../../assets/images/plateform-dark.svg"
-								alt="personnage"
-								height="40%"
-								/>
-						</div>
-					</div>
-					<div class="news-box">
-						<div class="img-news">
-							<img *ngFor="let img of imgs; let index = index" src={{img.link}} [ngClass]="{'transparent': index!=selectedElement}"/>
-						</div>
-						<div class="news-slider-btns">
-							<input (change)="change(index)" type="radio" name="newchoice" *ngFor="let img of imgs; let index = index;" [checked]="index==autoRadioBtnIndex"/>
-						</div>
-						<div class="news-content">
-							<div class="news-title">
-								<div class="news-article-title">
-									Point sur AllanLeDealos : il vend de plus en plus
-								</div>
-								<div class="news-article-date">
-									1er MARS 2020
-								</div>
-							</div>
-							<hr/>
-							<div class="news-description">
-								<p>Il n’y avait pas eu d’article depuis Juin 2019 à l’arrivée des Lauriers en tant que nouveau système de classement. Il est grand temps de faire un point sur les nombreuses évolutions de Wolfy.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="button-wrapper" >
-					<button mat-stroked-button >
-						<mat-icon>play_arrow</mat-icon>
-						Jouer une partie
-					</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	<app-tokens-carousel>
-	</app-tokens-carousel>
+<app-header>
+</app-header>
+<div class="container">
+    <div class="homepage">
+        <div class="background-img">
+            <app-article-carousel></app-article-carousel>
+            <div class="button-wrapper">
+                <button mat-stroked-button >
+                    <mat-icon>play_arrow</mat-icon>
+                    Jouer une partie
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
+<app-tokens-carousel>
+</app-tokens-carousel>
+<app-footer></app-footer>

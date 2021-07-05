@@ -7,11 +7,11 @@
 		</div>
 		<div class="header-right">
 			<a href="#" class="header-link">Actualités</a>
-			<button *ngIf="!isConnected" mat-stroked-button (click)="connect()">
+			<button *ngIf="!isConnected" mat-stroked-button  routerLink="/connexion" (click)="connect()">
 				<mat-icon>power_settings_new</mat-icon>
 				Connexion
 			</button>
-			<button *ngIf="isConnected" mat-stroked-button (click)="disconnect()" >
+			<button *ngIf="isConnected" mat-stroked-button   (click)="disconnect()" >
 				<mat-icon>power_settings_new</mat-icon>
 				Se deconnecter
 			</button>
