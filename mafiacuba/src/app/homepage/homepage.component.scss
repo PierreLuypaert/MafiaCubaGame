@@ -1,4 +1,17 @@
+::-webkit-scrollbar {
+	width: 6px;
+	background-color: black;
+}
 
+::-webkit-scrollbar-thumb {
+	background: var(--main-bg-color);
+	border-radius: 10px;
+  }
+
+.scrollable-div{
+	max-height: 100vh;
+	overflow: auto;	
+}
 
 .container{
 	height: 100vh;
@@ -122,7 +135,7 @@ button{
 		padding-bottom:5px;
 	}
 }
-
+/* Rules part */
 
 
 .carousel-article
