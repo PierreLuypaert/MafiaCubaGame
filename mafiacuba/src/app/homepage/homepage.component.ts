@@ -52,6 +52,7 @@ export class HomepageComponent implements OnInit, AfterViewInit {
       }
     });
   } 
+
   
   ngAfterViewInit(): void {
   //  setInterval(() => { this.autoChange() }, 8000);

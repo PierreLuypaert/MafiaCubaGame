@@ -25,7 +25,6 @@
 }
 
 .mid-container{
-    flex:0.5;
     position: relative;	
 	margin: auto;
 	width: 50%;
@@ -43,14 +42,17 @@
 
 .left
 {
-    background-color: white;
+    background-image: url('../../assets/images/connexion/connexion-img.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
     width: 60%;
 }
 .right
 {
     min-width: 250px;
     width: 40%;
-    background-color: rgba(0,0,0,0.3);
+    background: linear-gradient(90deg,#553C2A 0%, #2B1E16 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,8 +67,6 @@
 
 
 
-
-button {background-image: linear-gradient(to right, #e52d27 0%, #b31217  51%, #e52d27  100%)}
 button
 {
     height:50px;
@@ -76,11 +76,11 @@ button
 	border-radius: 10px;
 	vertical-align: middle;
     background-size: 200% auto;
+    background-image: linear-gradient(to right, rgb(150, 121, 99) 0%, #603813  51%, rgb(150, 121, 99)    100%) !important;
     transition: 0.5s;
     margin-top: 8px;
 	.mat-icon
 	{
-
 		padding-bottom:5px;
 	}
 }
@@ -88,6 +88,18 @@ button:hover{
     background-position: right center; /* change the direction of the change here */
         color: #fff;
         text-decoration: none;
+}
+
+.back-btn {
+    position: absolute;
+    bottom: 15%;
+    font-size: 4em;
+    font-weight: 300;
+    opacity: .4;
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+    color:grey;
 }
 
 
@@ -99,7 +111,8 @@ button:hover{
     }
 
     .site-name{
-        display:none;
+        top:3%; 
+        font-size: 0.5em;
     }
     .left{
         width:100%; 
@@ -115,5 +128,11 @@ button:hover{
     mat-icon
     {
         display: none;
+    }
+
+    .back-btn
+    {
+        bottom: 3%;
+        font-size: 2em;
     }
 }
