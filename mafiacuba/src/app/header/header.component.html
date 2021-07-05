@@ -1,0 +1,39 @@
+<div class="header" [ngClass]="{'opaque': isOnTop}" >
+	<div class="header-container-desktop">
+		<div class="header-left">
+			<a href="#" class="header-link">Accueil</a>
+			<a href="#" class="header-link">Règles du jeu</a>
+			<a class="header-link" routerLink="/profil" >Classements</a>
+		</div>
+		<div class="header-right">
+			<a href="#" class="header-link">Actualités</a>
+			<button *ngIf="!isConnected" mat-stroked-button (click)="connect()">
+				<mat-icon>power_settings_new</mat-icon>
+				Connexion
+			</button>
+			<button *ngIf="isConnected" mat-stroked-button (click)="disconnect()" >
+				<mat-icon>power_settings_new</mat-icon>
+				Se deconnecter
+			</button>
+		</div>
+	</div>
+	<div class="header-container-mobile">
+		<div class="logo-icon">
+			<img class="icon" src="assets/images/icons/logo.svg"/>
+		</div>
+		<div class="button-wrapper" >
+			<button *ngIf="!isConnected" mat-stroked-button (click)="connect()" >
+				<mat-icon>power_settings_new</mat-icon>
+				Connexion
+			</button>
+			<button *ngIf="isConnected" mat-stroked-button (click)="disconnect()" >
+				<mat-icon>power_settings_new</mat-icon>
+				Se deconnecter
+			</button>
+			<button mat-stroked-button >
+				<mat-icon>play_arrow</mat-icon>
+				Jouer
+			</button>
+		</div>
+	</div>
+</div>

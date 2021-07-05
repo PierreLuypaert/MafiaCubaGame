@@ -1,52 +1,19 @@
-<div class="scrollable-div" cdkScrollable>
-    
-    <div class="header" [ngClass]="{'opaque': isOnTop}" >
-        <div class="header-container-desktop">
-            <div class="header-left">
-               
-                <a href="#" class="header-link">Accueil</a>
-                <a href="#" class="header-link">Règles du jeu</a>
-                <a href="#" class="header-link">Classements</a>
-            </div>
-            <div class="header-right">
-                <a href="#" class="header-link">Actualités</a>
-                <button mat-stroked-button >
-                    <mat-icon>power_settings_new</mat-icon>
-                    Connexion
-                </button>
-            </div>
-        </div>
-        <div class="header-container-mobile">
-            <div class="logo-icon">
-                <img class="icon" src="assets/images/icons/logo.svg"/>
-            </div>
+
+<app-header>
+</app-header>
+<div class="container">
+    <div class="homepage">
+        <div class="background-img">
+            <app-article-carousel></app-article-carousel>
             <div class="button-wrapper">
                 <button mat-stroked-button >
-                    <mat-icon>power_settings_new</mat-icon>
-                    Connexion
-                </button>
-                <button mat-stroked-button >
                     <mat-icon>play_arrow</mat-icon>
-                    Jouer
+                    Jouer une partie
                 </button>
             </div>
         </div>
     </div>
-
-    <div class="container">
-        <div class="homepage">
-            <div class="background-img">
-                <app-article-carousel></app-article-carousel>
-                <div class="button-wrapper">
-                    <button mat-stroked-button >
-                        <mat-icon>play_arrow</mat-icon>
-                        Jouer une partie
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <app-tokens-carousel>
-    </app-tokens-carousel>
-    <app-footer></app-footer>
 </div>
+<app-tokens-carousel>
+</app-tokens-carousel>
+<app-footer></app-footer>

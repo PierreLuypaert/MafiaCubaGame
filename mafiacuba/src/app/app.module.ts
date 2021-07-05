@@ -13,6 +13,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { ArticleCarouselComponent } from './article-carousel/article-carousel.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProfilComponent } from './profil/profil.component';
+import { HeaderComponent } from './header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,9 @@ import { FooterComponent } from './footer/footer.component';
     TokensCarouselComponent,
     ObserveVisibilityDirective,
     ArticleCarouselComponent,
-    FooterComponent
+    FooterComponent,
+    ProfilComponent,
+    HeaderComponent
   ],
   imports: [
     ScrollingModule,
