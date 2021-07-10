@@ -1,0 +1,13 @@
+.container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--connexion-bg-color);
+
+  .main-wrapper{
+    position: relative;
+    height:100%;
+    overflow: hidden;
+    display: flex;
+  }
+}
