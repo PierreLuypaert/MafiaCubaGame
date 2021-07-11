@@ -1,11 +1,24 @@
-<app-header>
-</app-header>
-<div class="container">
-	<div class="background-img">
-		<div class="group-container">
-			
-		</div>
-	</div>
+
+<div class="group-container">
+  <div class="left-container">
+    <div *ngFor="let user of users; let index = index" class="user">
+      <div class="rank">
+        {{ user.rank }}
+      </div>
+      <div class="username">
+        {{ user.username }}
+      </div>
+      <div class="user-icon">
+        <img src="../../assets/images/{{ user.icon }}" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="middle-container">
+
+  </div>
+  <div class="right-container">
+
+  </div>
 </div>
-<app-footer>
-</app-footer>
+
+

@@ -7,7 +7,7 @@
 		</div>
 		<div class="header-right">
 			<a href="#" class="header-link">Actualités</a>
-			<button *ngIf="!isConnected" mat-stroked-button  routerLink="/connexion" (click)="connect()">
+			<button *ngIf="!isConnected" mat-stroked-button  routerLink="/auth/connexion" (click)="connect()">
 				<mat-icon>power_settings_new</mat-icon>
 				Connexion
 			</button>
@@ -22,7 +22,7 @@
 			<img class="icon" src="assets/images/icons/logo.svg"/>
 		</div>
 		<div class="button-wrapper" >
-			<button *ngIf="!isConnected" mat-stroked-button (click)="connect()" >
+			<button *ngIf="!isConnected" mat-stroked-button routerLink="/auth/connexion" (click)="connect()" >
 				<mat-icon>power_settings_new</mat-icon>
 				Connexion
 			</button>

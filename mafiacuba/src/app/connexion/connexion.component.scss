@@ -1,5 +1,5 @@
 .full-container{
-    background:  linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url('../../assets/images/connexion/connexion-bg.jpg');
+    background:  linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url('../../assets/images/background-home.jpg');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -25,7 +25,7 @@
 }
 
 .mid-container{
-    position: relative;	
+    position: relative;
 	margin: auto;
 	width: 50%;
 	height:50vh;
@@ -111,11 +111,11 @@ button:hover{
     }
 
     .site-name{
-        top:3%; 
+        top:3%;
         font-size: 0.5em;
     }
     .left{
-        width:100%; 
+        width:100%;
     }
     .mid-container{
         flex-direction: column;

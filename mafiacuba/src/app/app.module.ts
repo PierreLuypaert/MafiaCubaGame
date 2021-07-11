@@ -16,6 +16,11 @@ import { ArticleCarouselComponent } from './article-carousel/article-carousel.co
 import { FooterComponent } from './footer/footer.component';
 import { ProfilComponent } from './profil/profil.component';
 import { HeaderComponent } from './header/header.component';
+import { InscriptionComponent } from './inscription/inscription.component';
+import { AuthenticationComponent } from './authentication/authentication.component';
+import { PlayComponent } from './play/play.component';
+import { PlayHeaderComponent } from './play-header/play-header.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +31,12 @@ import { HeaderComponent } from './header/header.component';
     ArticleCarouselComponent,
     FooterComponent,
     ProfilComponent,
-    HeaderComponent
+    HeaderComponent,
+    InscriptionComponent,
+    AuthenticationComponent,
+    PlayComponent,
+    PlayHeaderComponent,
+    MainpageComponent
   ],
   imports: [
     ScrollingModule,

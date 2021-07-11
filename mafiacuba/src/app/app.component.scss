@@ -7,6 +7,7 @@ body{
 
 }
 
+
 ::-webkit-scrollbar {
 	width: 6px;
 	background-color: black;
@@ -20,5 +21,5 @@ body{
 
 .scrollable-div{
 	max-height: 100vh;
-	overflow: auto;	
+	overflow: auto;
 }
