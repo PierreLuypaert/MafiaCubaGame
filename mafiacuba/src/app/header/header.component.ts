@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
   isOnTop = true;
   isConnected : boolean = false;
 
-  constructor(    
+  constructor(
     private scrollDispatcher: ScrollDispatcher,
     private zone: NgZone
     ) { }
@@ -34,13 +34,8 @@ export class HeaderComponent implements OnInit {
         });
       }
     });
-  } 
-
-  connect(){
-    this.isConnected = true
   }
 
-  disconnect(){
-    this.isConnected = false
-  }
+  connect()   { this.isConnected = true  }
+  disconnect(){ this.isConnected = false }
 }

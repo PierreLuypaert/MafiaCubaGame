@@ -12,11 +12,11 @@ import { global } from '../../shared/global';
   host: { '[@slideInOutAnimation]': '' }
 })
 export class ConnexionComponent implements OnInit {
+
   sitename: string = global.sitename;
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void { }
 
 }

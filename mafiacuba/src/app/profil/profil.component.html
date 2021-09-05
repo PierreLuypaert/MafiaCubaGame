@@ -1,7 +1,22 @@
 
 <div class="group-container">
   <div class="left-container">
-    <div *ngFor="let user of users; let index = index" class="user">
+    <div class="sort-selector">
+      <div class="global" (click)="showGlobal()"> Classement global </div>
+      <div class="friends" (click)="showFriends()"> Classement amis </div>
+    </div>
+    <div class="user header-user">
+      <div class="rank">
+        Rang
+      </div>
+      <div class="username">
+        Joueur
+      </div>
+      <div class="user-icon">
+        Icône
+      </div>
+    </div>
+    <div *ngFor="let user of selected_sort; let index = index" class="user" (click)="showUser(index)">
       <div class="rank">
         {{ user.rank }}
       </div>
@@ -13,10 +28,13 @@
       </div>
     </div>
   </div>
-  <div class="middle-container">
-
-  </div>
   <div class="right-container">
+    <div class="user-block">
+      <div class="username"> {{ username }} </div>
+      <div class="game-played"></div>
+      <div class="winrate"></div>
+      <div class="history"></div>
+    </div>
 
   </div>
 </div>

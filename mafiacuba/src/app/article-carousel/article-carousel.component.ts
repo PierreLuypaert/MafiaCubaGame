@@ -14,7 +14,7 @@ const IMAGES : any[] = [
 })
 export class ArticleCarouselComponent implements OnInit, AfterViewInit {
 
-    
+
   imgs = IMAGES
 
   selectedElement : number = 0;
@@ -27,6 +27,7 @@ export class ArticleCarouselComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
+    // scrolling automatique des articles
     setInterval(() => { this.autoChange() }, 8000);
   }
 

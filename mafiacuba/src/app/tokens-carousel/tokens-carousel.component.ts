@@ -5,7 +5,7 @@ import { transformAll } from '@angular/compiler/src/render3/r3_ast';
 interface token {
     link : String
     name : String
-    desc : String 
+    desc : String
 }
 
 const TOKENS : token[] = [
@@ -21,21 +21,18 @@ const TOKENS : token[] = [
 })
 export class TokensCarouselComponent implements OnInit {
 
-  tokens : token[] = []
-  selectedToken : number = 0
+  tokens           : token[] = []
+  selectedToken    : number  = 0
   transitionEffect : boolean = true;
 
   titleVisible : boolean = false;
   roleVisible  : boolean = false;
   imageVisible : boolean = false;
-  
 
-  constructor() {
-
-  }
+  constructor() { }
 
   ngOnInit(): void {
-    this.tokens = this.tokens.concat(TOKENS,TOKENS,TOKENS,TOKENS,TOKENS,TOKENS,TOKENS,TOKENS,TOKENS)
+    this.tokens        = this.tokens.concat(TOKENS,TOKENS,TOKENS,TOKENS,TOKENS,TOKENS,TOKENS,TOKENS,TOKENS)
     this.selectedToken = Math.round(this.tokens.length/2)
   }
 
@@ -45,34 +42,34 @@ export class TokensCarouselComponent implements OnInit {
   slideToRight(){
     if ( this.selectedToken - Math.round(this.tokens.length/2) > 4){
       this.transitionEffect = false
-      this.selectedToken =  Math.round(this.tokens.length/2)
+      this.selectedToken    =  Math.round(this.tokens.length/2)
     }
     else{
       this.transitionEffect = true
       this.selectedToken ++;
     }
-    
+
   }
 
   slideToLeft(){
     if (  Math.round(this.tokens.length/2) - this.selectedToken > 4 ){
       this.transitionEffect = false
-      this.selectedToken =  Math.round(this.tokens.length/2)
+      this.selectedToken    =  Math.round(this.tokens.length/2)
     }
     else{
       this.transitionEffect = true
       this.selectedToken --;
     }
-      
+
   }
 
   selectToken( index : number ){
     this.transitionEffect = true
-    this.selectedToken = index
+    this.selectedToken    = index
   }
 
-  /** 
-   * Liste des accesseurs , gestions des animations , des textes et de la position des éléments en fonction du jeton sélectionné 
+  /**
+   * Liste des accesseurs , gestions des animations , des textes et de la position des éléments en fonction du jeton sélectionné
    */
 
   get role_name() : String { return this.tokens[this.selectedToken].name }
@@ -93,30 +90,22 @@ export class TokensCarouselComponent implements OnInit {
     if ( index > this.selectedToken ) {
       transform +=  " translate(calc(38vh - 50% + (16vh + 40px) *" + (index-this.selectedToken-1) + "),-50%)"
     }
-    
+
     return transform
   }
 
   getScale( index : number){
     if ( this.imageVisible )
       return index == this.selectedToken ? "transform : scale(2.2);" : "transform : scale(1); "
-    else 
+    else
       return "transform : scale(0.5)"
   }
 
   /**
-   * 
+   * Gère l'apparition des éléments et leurs animations lors du scrolling de la page
    */
 
-  onTitleVisible(){
-    this.titleVisible = true
-  }
-
-  onRoleVisible(){
-    this.roleVisible = true
-  }
-
-  onImageVisible(){
-    this.imageVisible = true
-  }
+  onTitleVisible(){ this.titleVisible = true }
+  onRoleVisible() { this.roleVisible = true }
+  onImageVisible(){ this.imageVisible = true }
 }
